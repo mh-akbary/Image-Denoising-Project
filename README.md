@@ -12,9 +12,23 @@ The experiments were performed on a dataset of **300 grayscale images**.
 
 ## Dataset
 
-The experiments were conducted using a dataset containing **300 grayscale images**.
+The experiments were performed using the **Multi Noises for Image Denoising** dataset from Kaggle.
 
-For each noise type, noisy versions of the images were processed using multiple spatial filtering methods. The filtered results were then compared with the corresponding original images.
+The dataset contains **300 grayscale images** with different types of noise.
+
+The following noise types were investigated:
+
+- Gaussian Noise
+- Salt and Pepper Noise
+- Poisson Noise
+- JPEG Noise
+- Speckle Noise
+- Multiplicative Noise
+- Quantization Noise
+
+Dataset source:
+
+[Multi Noises for Image Denoising - Kaggle](https://www.kaggle.com/datasets/goutham1208/multi-noises-for-image-denoising)
 
 ## Noise Types
 
