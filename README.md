@@ -108,6 +108,13 @@ The project was implemented using Python and the following libraries:
 - scikit-image
 - Jupyter Notebook
 
+
+## Conclusion
+
+This project provides a comparative evaluation of different spatial denoising filters under multiple noise conditions.
+
+The experimental results demonstrate that filter performance depends on the type of noise and the filter configuration.
+
 ## Project Structure
 
 ```text
@@ -117,8 +124,3 @@ Image-Denoising-Project/
 ├── README.md
 └── ...
 
-## Conclusion
-
-This project provides a comparative evaluation of different spatial denoising filters under multiple noise conditions.
-
-The experimental results demonstrate that filter performance depends on the type of noise and the filter configuration.
