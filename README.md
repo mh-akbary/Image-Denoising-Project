@@ -1,39 +1,43 @@
 # Image Denoising Project
 
+A comparative study of image denoising techniques using different noise models and spatial filtering methods.
+
 ## Overview
 
-This project investigates image denoising using different noise models and spatial filtering methods.
+This project investigates the performance of different spatial filters for removing various types of noise from grayscale images.
 
-The main objective is to compare the performance of several denoising filters under different types of image noise.
+The main objective is to evaluate and compare denoising filters under different noise conditions using quantitative image-quality metrics and visual comparisons.
+
+The experiments were performed on a dataset of **300 grayscale images**.
 
 ## Dataset
 
-The experiments were performed on a dataset containing 300 grayscale images.
+The experiments were conducted using a dataset containing **300 grayscale images**.
 
-For each noise type, the noisy images were processed using several spatial filtering methods.
+For each noise type, noisy versions of the images were processed using multiple spatial filtering methods. The filtered results were then compared with the corresponding original images.
 
 ## Noise Types
 
-The following seven noise types were investigated:
+Seven different noise types were investigated:
 
-- Gaussian Noise
-- Salt and Pepper Noise
-- Poisson Noise
-- JPEG Noise
-- Speckle Noise
-- Multiplicative Noise
-- Quantization Noise
+1. Gaussian Noise
+2. Salt and Pepper Noise
+3. Poisson Noise
+4. JPEG Noise
+5. Speckle Noise
+6. Multiplicative Noise
+7. Quantization Noise
 
 ## Denoising Filters
 
-Four spatial filters were evaluated:
+Four spatial filtering techniques were evaluated:
 
-- Mean Filter
-- Gaussian Filter
-- Median Filter
-- Bilateral Filter
+- **Mean Filter**
+- **Gaussian Filter**
+- **Median Filter**
+- **Bilateral Filter**
 
-For most filters, different kernel sizes were tested:
+Different kernel sizes were tested:
 
 - 3×3
 - 5×5
@@ -41,43 +45,45 @@ For most filters, different kernel sizes were tested:
 
 ## Evaluation Metrics
 
-The performance of the filters was evaluated using three image quality metrics:
+The performance of the denoising methods was evaluated using three image-quality metrics.
 
-### MSE
+### Mean Squared Error (MSE)
 
-Mean Squared Error (MSE) measures the average squared difference between the original and filtered images.
+MSE measures the average squared difference between the original image and the filtered image.
 
-Lower MSE indicates a smaller reconstruction error.
+**Lower MSE indicates lower reconstruction error.**
 
-### PSNR
+### Peak Signal-to-Noise Ratio (PSNR)
 
-Peak Signal-to-Noise Ratio (PSNR) measures the quality of the reconstructed image.
+PSNR measures the similarity between the original and reconstructed images.
 
-Higher PSNR generally indicates better image quality.
+**Higher PSNR generally indicates better reconstruction quality.**
 
-### SSIM
+### Structural Similarity Index (SSIM)
 
-Structural Similarity Index (SSIM) measures the structural similarity between the original and filtered images.
+SSIM measures structural similarity between the original and filtered images.
 
 Values closer to 1 indicate greater structural similarity.
 
 ## Experimental Procedure
 
-The experiment follows these main steps:
+The project follows the following workflow:
 
-1. Load the image dataset.
-2. Visualize different noise types.
-3. Select test images.
-4. Apply different denoising filters.
-5. Evaluate the filtered images using MSE, PSNR, and SSIM.
-6. Rank the filters based on their performance.
-7. Evaluate the filters on all 300 images.
-8. Calculate the average performance for each filter.
-9. Compare the results for all noise types.
+1. Load the grayscale image dataset.
+2. Generate and/or load images containing different noise types.
+3. Visualize the original image and its noisy versions.
+4. Select test images for visual analysis.
+5. Apply the Mean, Gaussian, Median, and Bilateral filters.
+6. Test different filter kernel sizes.
+7. Calculate MSE, PSNR, and SSIM for the filtered images.
+8. Evaluate the filters across all 300 images.
+9. Calculate the average performance of each filter.
+10. Generate comparison tables and visualization charts.
+11. Compare filter performance across all seven noise types.
 
 ## Results
 
-The performance of the filters was compared separately for each noise type.
+The results were evaluated separately for each noise type.
 
 The results include:
 
@@ -85,22 +91,48 @@ The results include:
 - Average PSNR
 - Average SSIM
 - Visual comparisons of original, noisy, and filtered images
-- Comparison charts for the evaluated filters
+- Filter performance comparison tables
+- Bar charts for MSE, PSNR, and SSIM
+
+## Visual Analysis
+
+The project includes visual comparisons showing:
+
+- Original images
+- Noisy images
+- Filtered images
+
+These visualizations provide a qualitative comparison of how each filtering method affects image noise, details, and structures.
+
+## Quantitative Analysis
+
+The quantitative evaluation is based on the average results obtained from the complete dataset.
+
+| Metric | Interpretation | Desired Direction |
+|--------|----------------|-------------------|
+| MSE | Reconstruction error | Lower |
+| PSNR | Reconstruction quality | Higher |
+| SSIM | Structural similarity | Higher |
 
 ## Final Comparison
 
-A final comparison was performed to examine filter performance across the seven noise types.
+A final comparison was performed across all seven noise types.
 
-The comparison focuses on the three evaluation metrics:
+The comparison considers:
 
 - MSE
 - PSNR
 - SSIM
 
+The purpose of this comparison is to examine how filter performance changes depending on the type of noise and the filter configuration.
+
+The results demonstrate that the effectiveness of a denoising filter depends on the characteristics of the noise, the selected filter, and the kernel size.
+
 ## Technologies
 
-The project was implemented using Python and the following libraries:
+The project was implemented in Python using:
 
+- Python
 - OpenCV
 - NumPy
 - Pandas
@@ -108,19 +140,13 @@ The project was implemented using Python and the following libraries:
 - scikit-image
 - Jupyter Notebook
 
-
-## Conclusion
-
-This project provides a comparative evaluation of different spatial denoising filters under multiple noise conditions.
-
-The experimental results demonstrate that filter performance depends on the type of noise and the filter configuration.
-
 ## Project Structure
 
 ```text
 Image-Denoising-Project/
 │
-├── Image_Denoising.ipynb
+├── image-denoising-filter-comparison-and-evaluation.ipynb
 ├── README.md
+├── requirements.txt
+├── .gitignore
 └── ...
-
