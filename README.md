@@ -150,3 +150,24 @@ Image-Denoising-Project/
 ├── requirements.txt
 ├── .gitignore
 └── ...
+```
+گگگ
+
+## Conclusion
+
+This project provides a comparative evaluation of spatial image denoising filters under seven different noise conditions.
+
+The experiments show that denoising performance varies depending on:
+
+- The type of noise
+- The selected filtering method
+- The filter kernel size
+- The evaluation metric
+
+The combination of visual analysis and quantitative metrics provides a comprehensive evaluation of the investigated denoising methods.
+
+## Author
+
+**Mohadese Akbary**
+
+GitHub: @mh-akbary
