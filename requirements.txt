@@ -3,4 +3,5 @@ pandas
 opencv-python
 matplotlib
 scikit-image
+scikit-learn
 jupyter
